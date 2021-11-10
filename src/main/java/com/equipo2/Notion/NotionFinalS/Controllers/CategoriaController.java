@@ -1,7 +1,7 @@
-package com.equipo2.Notion.NotionFinal.Controllers;
+package com.equipo2.Notion.NotionFinalS.Controllers;
 
-import com.equipo2.Notion.NotionFinal.Entities.Categoria;
-import com.equipo2.Notion.NotionFinal.Services.CategoriaService;
+import com.equipo2.Notion.NotionFinalS.Entities.Categoria;
+import com.equipo2.Notion.NotionFinalS.Services.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

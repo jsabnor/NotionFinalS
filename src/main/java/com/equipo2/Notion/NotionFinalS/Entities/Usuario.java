@@ -1,8 +1,9 @@
-package com.equipo2.Notion.NotionFinal.Entities;
+package com.equipo2.Notion.NotionFinalS.Entities;
 
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Clase Usuario
@@ -19,10 +20,15 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String username;
     private String password;
     private String email;
-    private Integer rol;
+    @ManyToMany
+    @JoinTable(name="usuario_rol",
+            joinColumns = @JoinColumn(name="id_usuario"),
+            inverseJoinColumns =@JoinColumn(name="id_rol"))
+    private Set<Rol> roles=new HashSet<>();
 
     //CONSTRUCTOR
 
@@ -37,13 +43,11 @@ public class Usuario {
      * @param username nombre de usuario
      * @param password password del usuario
      * @param email del usuario
-     * @param rol del usuario
      */
-    public Usuario(String username, String password, String email, Integer rol) {
+    public Usuario(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.rol= rol;
     }
 
     //METODOS
@@ -54,7 +58,6 @@ public class Usuario {
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", rol=" + rol +
                 '}';
     }
 
@@ -100,13 +103,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public Integer getRol() {
-        return rol;
+    public Set<Rol> getRoles() {
+        return roles;
     }
 
-    public void setRol(Integer rol) {
-        this.rol = rol;
+    public void setRoles(Set<Rol> roles) {
+        this.roles = roles;
     }
-
-
 }

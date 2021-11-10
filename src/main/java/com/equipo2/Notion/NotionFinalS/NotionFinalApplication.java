@@ -1,11 +1,11 @@
-package com.equipo2.Notion.NotionFinal;
+package com.equipo2.Notion.NotionFinalS;
 
-import com.equipo2.Notion.NotionFinal.Entities.Articulo;
-import com.equipo2.Notion.NotionFinal.Entities.Categoria;
-import com.equipo2.Notion.NotionFinal.Entities.Usuario;
-import com.equipo2.Notion.NotionFinal.Services.ArticuloService;
-import com.equipo2.Notion.NotionFinal.Services.CategoriaService;
-import com.equipo2.Notion.NotionFinal.Services.UsuarioService;
+import com.equipo2.Notion.NotionFinalS.Entities.Articulo;
+import com.equipo2.Notion.NotionFinalS.Entities.Categoria;
+import com.equipo2.Notion.NotionFinalS.Entities.Usuario;
+import com.equipo2.Notion.NotionFinalS.Services.ArticuloService;
+import com.equipo2.Notion.NotionFinalS.Services.CategoriaService;
+import com.equipo2.Notion.NotionFinalS.Services.UsuarioService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -27,14 +27,12 @@ public class NotionFinalApplication {
 		usuarioService.save(new Usuario(
 				"josema",
 				"password",
-				"josema@equipo2.com",
-				0));
+				"josema@equipo2.com"));
 		//Creamos un usuario con rol 1 que equivale al rol USER y lo guardamos en la base de datos
 		usuarioService.save(new Usuario(
 				"clemen",
 				"password",
-				"clemen@equipo2.com",
-				1));
+				"clemen@equipo2.com"));
 		//Creamos categorias
 		Categoria cat1=new Categoria("Spring");
 		Categoria cat2=new Categoria("React");

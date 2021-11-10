@@ -1,7 +1,4 @@
-package com.equipo2.Notion.NotionFinal.Entities;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+package com.equipo2.Notion.NotionFinalS.Entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;

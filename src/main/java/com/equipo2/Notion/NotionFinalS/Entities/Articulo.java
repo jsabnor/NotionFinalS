@@ -1,7 +1,6 @@
-package com.equipo2.Notion.NotionFinal.Entities;
+package com.equipo2.Notion.NotionFinalS.Entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.time.LocalDate;

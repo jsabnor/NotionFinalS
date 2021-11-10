@@ -1,12 +1,14 @@
-package com.equipo2.Notion.NotionFinal.Services;
+package com.equipo2.Notion.NotionFinalS.Services;
 
-import com.equipo2.Notion.NotionFinal.Entities.Usuario;
-import com.equipo2.Notion.NotionFinal.Repositories.UsuarioRepository;
+import com.equipo2.Notion.NotionFinalS.Entities.Usuario;
+import com.equipo2.Notion.NotionFinalS.Repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 /**
  * Service Usuario. Implementamos los metodos CRUD
@@ -17,6 +19,7 @@ import java.util.NoSuchElementException;
  * @version 1.0
  */
 @Service
+@Transactional
 public class UsuarioService {
     //ATRIBUTOS
     @Autowired
@@ -101,6 +104,33 @@ public class UsuarioService {
      */
     public boolean existByid(Long id) {
         return usuarioRepository.existsById(id);
+    }
+
+    /**
+     * Metodo que busca un usuario por nombre de usuario
+     * @param username nombre de usuario
+     * @return Optional Usuario
+     */
+    public Optional<Usuario> findByUsername(String username){
+        return usuarioRepository.findByUsername(username);
+    }
+
+    /**
+     * Metodo que comprueba si existe un usuario por nombre de usuario
+     * @param username nombre de usuario
+     * @return true si existe y false si no existe
+     */
+    public Boolean existsByUsername(String username){
+        return usuarioRepository.existsByUsername(username);
+    }
+
+    /**
+     * Metodo que comprueba si existe un usuario por email
+     * @param email del usuario
+     * @return true si exite y false si no existe
+     */
+    public Boolean existsByEmail(String email){
+        return usuarioRepository.existsByEmail(email);
     }
 
     //GETTER Y SETTER

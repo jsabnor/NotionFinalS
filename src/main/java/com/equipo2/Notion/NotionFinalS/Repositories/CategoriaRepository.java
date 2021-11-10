@@ -1,6 +1,6 @@
-package com.equipo2.Notion.NotionFinal.Repositories;
+package com.equipo2.Notion.NotionFinalS.Repositories;
 
-import com.equipo2.Notion.NotionFinal.Entities.Categoria;
+import com.equipo2.Notion.NotionFinalS.Entities.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

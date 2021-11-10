@@ -1,7 +1,7 @@
-package com.equipo2.Notion.NotionFinal.Services;
+package com.equipo2.Notion.NotionFinalS.Services;
 
-import com.equipo2.Notion.NotionFinal.Entities.Categoria;
-import com.equipo2.Notion.NotionFinal.Repositories.CategoriaRepository;
+import com.equipo2.Notion.NotionFinalS.Entities.Categoria;
+import com.equipo2.Notion.NotionFinalS.Repositories.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
