@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.equipo2.Notion</groupId>
-	<artifactId>NotionFinal</artifactId>
+	<artifactId>NotionFinalS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>NotionFinal</name>
 	<description>Demo project for Spring Boot</description>
