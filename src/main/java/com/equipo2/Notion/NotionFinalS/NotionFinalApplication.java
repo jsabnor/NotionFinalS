@@ -22,7 +22,7 @@ public class NotionFinalApplication {
 		ArticuloService articuloService=context.getBean(ArticuloService.class);
 		UsuarioService usuarioService=context.getBean(UsuarioService.class);
 		CategoriaService categoriaService=context.getBean(CategoriaService.class);
-
+/*
 		//Creamos un usuario con rol 0 que equivale al rol ADMIN y lo guardamos en la base de datos
 		usuarioService.save(new Usuario(
 				"josema",
@@ -58,7 +58,7 @@ public class NotionFinalApplication {
 		articuloService.save(art1);
 		articuloService.save(art2);
 
-
+*/
 	}
 
 }
